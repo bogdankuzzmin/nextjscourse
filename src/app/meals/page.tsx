@@ -1,8 +1,11 @@
 import classes from './page.module.css';
 import Link from 'next/link';
 import Meals from '@/components/meals';
+import {getMeals} from '../../../lib/meals';
 
-const MealsPage = () => {
+const MealsPage = async () => {
+  const meeals = await getMeals();
+
   return (
     <>
       <header className={classes.header}>
@@ -21,7 +24,7 @@ const MealsPage = () => {
       </header>
 
       <main className={classes.main}>
-        <Meals meals={[]} />
+        <Meals meals={meeals} />
       </main>
     </>
   );
