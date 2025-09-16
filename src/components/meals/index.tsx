@@ -1,7 +1,7 @@
 import classes from './meals.module.css';
 import MealItem from '@/components/meals/mealItem';
 
-const Meals = ({ meals }) => {
+const MealsList = ({ meals }) => {
   return (
     <ul className={classes.meals}>
       {meals.map((meal) => (
@@ -13,4 +13,4 @@ const Meals = ({ meals }) => {
   )
 };
 
-export default Meals;
+export default MealsList;

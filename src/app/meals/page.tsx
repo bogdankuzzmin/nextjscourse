@@ -1,10 +1,15 @@
 import classes from './page.module.css';
 import Link from 'next/link';
-import Meals from '@/components/meals';
-import {getMeals} from '../../../lib/meals';
+import MealsList from '@/components/meals';
+import { getMeals } from '../../../lib/meals';
+import {Suspense} from 'react';
+
+const Meals = async () => {
+  const meals = await getMeals();
+  return <MealsList meals={meals} />;
+};
 
 const MealsPage = async () => {
-  const meeals = await getMeals();
 
   return (
     <>
@@ -24,7 +29,9 @@ const MealsPage = async () => {
       </header>
 
       <main className={classes.main}>
-        <Meals meals={meeals} />
+        <Suspense fallback={<p className={classes.loading}>Fetching meals...</p>}>
+          <Meals />
+        </Suspense>
       </main>
     </>
   );
