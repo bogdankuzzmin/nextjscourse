@@ -4,7 +4,6 @@
   width: 90%;
   max-width: 75rem;
   font-size: 1.5rem;
-  text-align: center;
   color: #ddd6cb;
 }
 
@@ -19,45 +18,19 @@
   -webkit-text-fill-color: transparent;
 }
 
-.main {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 40rem;
-  text-align: center;
-}
-
-.main h2 {
-  margin-bottom: 3rem;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  color: #ddd6cb;
-}
-
-.perks {
-  margin: 3rem 0;
-  padding: 0;
-  list-style: none;
-}
-
-.perks li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.perks img {
-  width: 8rem;
-  height: 8rem;
-  object-fit: contain;
-}
-
-.perks p {
+.header p {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
   font-weight: bold;
-  color: #ddd6cb;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  border-radius: 0.5rem;
 }
 
 .loading {
