@@ -12,7 +12,7 @@ interface ImagePickerProps {
 const ImagePicker = ({ label, name }: ImagePickerProps) => {
   const [pickedImage, setPickedImage] = useState<string | null>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
-  console.log('pickedImage', pickedImage)
+
   const handlePickClick = () => {
     imageInputRef.current?.click();
   };
