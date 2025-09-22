@@ -1,6 +1,7 @@
-import classes from './page.module.css';
 import ImagePicker from '@/components/meals/imagePicker';
-import { shareMeal } from '../../../../lib/actions';
+import { shareMeal } from '@/lib/actions';
+
+import classes from './page.module.css';
 
 const ShareMealPage = () => {
   return (

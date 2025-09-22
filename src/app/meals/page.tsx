@@ -1,8 +1,10 @@
-import classes from './page.module.css';
+import { Suspense } from 'react';
 import Link from 'next/link';
+
 import MealsList from '@/components/meals';
-import { getMeals } from '../../../lib/meals';
-import {Suspense} from 'react';
+import { getMeals } from '@/lib/meals';
+
+import classes from './page.module.css';
 
 const Meals = async () => {
   const meals = await getMeals();
